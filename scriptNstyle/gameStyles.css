@@ -1,0 +1,103 @@
+body {
+	font-family: sans-serif;
+	overflow-y: scroll; 
+	background:url(../images/gameBG.jpg);
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+	}	
+.fullwidthContiner{
+	width:100%;
+	margin-top:1%;
+}
+.mainWrapper{
+	max-width:1030px;
+	width:94%;
+	margin:0 auto;
+	border-bottom:6px solid #bf0000;
+	opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+	background:#ffffff;
+	-webkit-box-shadow: 0px -2px 12px 0px rgba(194,194,194,1);
+	-moz-box-shadow: 0px -2px 12px 0px rgba(194,194,194,1);
+	box-shadow: 0px -2px 12px 0px rgba(194,194,194,1);
+}
+.mainContainer{
+	width:94%;
+	margin:auto;
+	height:900px;
+}
+header{
+	width:98%; 
+	height:12%; 
+	margin:auto; 
+}
+.headingDiv{
+	width:30%;
+	height:50%;
+	margin:auto;
+	font-size:1.7em;
+	padding-top:1.8%;
+	font-stretch:extra-expanded;
+	font-weight:800;
+	color:red;
+}
+.chartDiv{
+	width:98%;
+	height:42%;
+	margin:auto;
+	margin-top:1%;
+}
+.playDiv{
+	width:98%;
+	height:43%;
+	margin:auto;
+	margin-top:1%;
+	background: rgba(255,255,255,1);
+}
+/*modal*/
+
+/* The Modal (background) */
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid darkslategray;
+    width: 15%;
+	height:15%;
+	margin-top:5%;
+	color:#2f5597;
+}
+
+.screens{
+	width:60%;
+	height:40%;
+	margin:auto;
+}
+.spinDiv{
+	width:8%;
+	height:18%;
+	margin:auto;
+	margin-top:10%;
+	cursor:pointer;
+}
+/*.footercontainer{
+	max-width:1030px;
+	width:94%;
+	margin:0 auto;
+	background-color:gray;
+	/*padding:15px 0 30px;*/
+/*}*/
