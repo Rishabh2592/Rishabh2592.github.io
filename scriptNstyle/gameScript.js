@@ -23,8 +23,8 @@ gameApp.controller('gameController',function($scope,$window){
 	var options = {
 		title: {
 			text: "Record of the day",
-			fontColor: "red",
-            fontSize: 20
+			fontColor: "black",
+            fontSize: 12
 		},
                 animationEnabled: true,
 		data: [
