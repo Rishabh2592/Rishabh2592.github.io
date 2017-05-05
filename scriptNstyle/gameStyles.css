@@ -94,10 +94,66 @@ header{
 	margin-top:10%;
 	cursor:pointer;
 }
-/*.footercontainer{
-	max-width:1030px;
-	width:94%;
-	margin:0 auto;
-	background-color:gray;
-	/*padding:15px 0 30px;*/
-/*}*/
+
+.popupFont{
+	font-size:1.2em;
+}
+
+/*Responsive design*/
+@media screen and (min-width: 731px)
+and (max-width: 1040px) {
+    .headingDiv{
+        font-size:1.2em;
+    }
+	.popupFont{
+	font-size:1.1em;
+}
+}
+@media screen and (min-width: 540px)
+and (max-width: 730px) {
+    .headingDiv{
+        font-size:0.9em;
+    }
+	.popupFont{
+	font-size:1em;
+}
+.okFont{
+	font-size:0.7em;
+}
+}
+@media screen and (min-width: 425px)
+and (max-width: 539px) {
+    .headingDiv{
+        font-size:0.7em;
+    }
+	.popupFont{
+	font-size:0.9em;
+}
+.okFont{
+	font-size:0.4em;
+}
+}
+@media screen and (min-width: 324px)
+and (max-width: 424px) {
+    .headingDiv{
+        font-size:0.5em;
+    }
+		.popupFont{
+	font-size:0.7em;
+}
+.okFont{
+	font-size:0.4em;
+}
+}
+
+@media screen and (max-width: 323px) {
+    .headingDiv{
+        font-size:0.4em;
+    }
+		.popupFont{
+	font-size:0.5em;
+}
+.okFont{
+	font-size:0.3em;
+}
+}
