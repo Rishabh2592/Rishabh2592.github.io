@@ -5,7 +5,8 @@ var gameApp = angular.module('gameApp', []);
 
 gameApp.controller('gameController',function($scope,$window){
 	$scope.heading = "SPIN YOUR LUCK";
-	var nwCount = 10;
+    //variables updating chart
+    var nwCount = 10;
     var wCount = 7;
     var bwCount = 3;
 	var chartFunction = function(res){
@@ -42,16 +43,21 @@ gameApp.controller('gameController',function($scope,$window){
 	$("#chartContainer").CanvasJSChart(options);
 
 	}
-	
+	//calling chartFunction() onload of the page
 	$window.onload = chartFunction();
-
+//flag for showing/hiding popup
 $scope.openPopup = false;
+//variable to store popup text based on conditions
 $scope.popupText = "";
+//Variable to count 2 big wins consecutively i.e Bonus Win
 var bonusCounter = 0;
+//variable for sending result string to chart function
 var result = "";
+//function to hide popup
 $scope.closePopup = function(){
 $scope.openPopup = false;
 }
+//main function to toggle the images based on randomly generated numbers
 $scope.changeImages = function(){
 	var num1 = Math.floor((Math.random() * 5) + 1);
 	 var image1 = document.getElementById("screen1");
