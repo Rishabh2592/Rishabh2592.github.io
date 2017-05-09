@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calendarApp">
+<head>
+	<title>My Calendar</title>
+	<meta charset="UTF-8"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script type="text/javascript" src="myCalendarJSnCSS/scriptCalendar.js"></script>
+    <link href="myCalendarJSnCSS/styleCalendar.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='lib/fullcalendar.css' rel='stylesheet' />
+<link href='lib/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='lib/jquery-ui.custom.min.js'></script>
+<script src='lib/fullcalendar.min.js'></script>
+</head>
+<body ng-controller="calendarController">
+    <div class="fullWidthContainer">
+	  <div class="mainWrapper">
+	     <div class="mainContainer">
+		 <header style="width:98%; height:5%; margin:auto;">
+		   <span style="font-size:1.5em; text-align:center; font-style:italic; display:block;"><b>My Calendar</b></span>
+		 </header>
+		    <div id='wrap'>
+
+                 <div id='external-events'>
+	               <h6>Events</h6>
+				   <div style="height:55%; width:95%; margin:auto; overflow-y:scroll;">
+			           <div class='fc-event' ng-repeat="event in events">{{event}}</div>
+				   </div>
+	               <p>
+		             <input type='checkbox' id='drop-remove' />
+		                <label for='drop-remove'>remove after drop</label>
+	              </p>
+               </div>
+		       <div id='calendar'></div>
+			   <div class="addEvent">
+			      <h6>Create Event</h6>
+				  <textarea style="resize:none; width:95%; height:30%; margin:auto;" ng-model="ev.name" placeholder="Enter event name.."></textarea>
+				  <button id="createButton" style="width:40%; height:12%; margin-top:8%; cursor:pointer; font-size:0.6em; text-align:center;" ng-click="addEvent();">CREATE</button>
+			   </div>
+	         </div>
+			 
+		 </div>
+	  </div>
+	</div>
+	<div class="footerContainer">
+	</div>
+</body>
+</html>
