@@ -43,6 +43,7 @@ header{
 }
 .chartDiv{
 	width:98%;
+	max-width:98%;
 	height:42%;
 	margin:auto;
 	margin-top:1%;
@@ -53,6 +54,15 @@ header{
 	margin:auto;
 	margin-top:1%;
 	background: rgba(255,255,255,1);
+}
+.outputLabel{
+	width:20%;
+	height:5%;
+	margin:auto;
+	margin-top:1%;
+	margin-bottom:1%;
+	color:red;
+	font-weight:bold;
 }
 /*modal*/
 
