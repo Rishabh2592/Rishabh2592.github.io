@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html ng-app="menuApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<style>
+	li{
+	list-style-type: none;
+    }
+    .titleMenu{
+	width:20px;
+	height:10px;
+	color: white;
+	background-color:blue;
+	cursor:pointer;
+	text-align:center;
+	border:0.5px solid black;
+	margin:0.5px;
+    }
+
+   .titleMenu:hover{
+	color:black;
+	background-color:white;
+    }
+	</style>
+    <script>
+	  var menuApp = angular.module("menuApp",[]);
+menuApp.controller("menuController", function ($scope) {
+	//toggle sub menu items
+ 	$scope.showSubMenu = function(title){
+		if(title.categories.length !== undefined){
+			title.showChildren = !title.showChildren;
+			} 
+		}
+	// categories dummy json
+ $scope.categories = [
+  {
+    title: "Software Products",
+    showChildren: false,
+	categories:	[
+      {
+    title: "Programming Languages",
+	showChildren: false,
+	categories: [
+	   {
+        title:  "Java API"
+	   },  
+	   {
+		title:  "Python API"
+	   }
+        ]
+      },
+      {
+       title: "Documentation",
+	   showChildren: false,
+	   categories: [
+	   {
+         title: "Java Docs"
+	   },
+	   {
+         title: "Python Docs"
+	   },
+        {
+         title:   "HTTP Docs"
+          }
+        ]
+      },
+      {
+		title:  "Try It!"
+	  }
+    ]
+  },
+  {
+    title: "Cloud Products",
+	showChildren: false,
+	categories: [
+	{
+    title:  "SAAS"
+    },
+	{
+	title:  "PAAS"
+    },
+	{
+	title:  "IAAS"
+    }
+	]
+  },
+  {
+    title: "About Us",
+	showChildren: false,
+	categories: [
+      {
+       title: "Locations",
+	   showChildren: false,
+	   categories: [
+          {
+           title: "India",
+		   showChildren: false,
+		   categories: [
+		   {
+            title:   "Delhi"
+		   },
+              {
+               title: "Mumbai",
+			   showChildren: false,
+			   categories: [
+			   {
+                title:  "Lower Parel",
+				showChildren: false,
+				categories: [
+				{
+					title: "one"
+				},
+				{
+					title: "two"
+				},
+				{
+					title: "three"
+				}
+				]
+			   },
+			   {
+                title:  "Goregaon"
+				  }
+                ]
+              },
+			  {
+              title: "Bangalore"
+			  }
+            ]
+          },
+		  {
+          title: "USA"
+		  },
+          {
+		  title: "Singapore"
+		  }
+        ]
+      },
+      {
+	  title:  "Founders"
+	  },
+	  {
+      title:  "Advisors"
+	  }
+    ]
+  },
+  {
+  title: "Contact Us"
+   }
+  ];
+
+});
+	</script>
+	
+  </head>
+  <body ng-controller="menuController">
+    <h2>Dynamic multilevel menu using AngularJS</h2>
+        <script type="text/ng-template" id="categoryTree">
+        <div style="width:200px; height:20px; color: red; background-color:white; cursor:pointer;"  ng-click="showSubMenu(category);">
+		{{ category.title }}
+		</div>
+        <ul ng-if="category.categories && category.showChildren">
+            <li  ng-repeat="category in category.categories" ng-include="'categoryTree'">           
+            </li>
+        </ul>
+    </script>
+    <ul>
+        <li ng-repeat="category in categories" ng-include="'categoryTree'"></li>
+    </ul>  
+  </body>
+</html>
