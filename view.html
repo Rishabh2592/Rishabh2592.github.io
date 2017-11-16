@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="twubricApp">
+  <head>
+    <title>Twubric</title>
+     <script src="angularMin.js"></script>
+	 <script type="text/javascript" src="script.js"></script>
+	 <link href="style.css" rel="stylesheet" type="text/css"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="fullwidthContiner">
+	  <div class="mainWrapper">
+    	<div class="mainContainer">
+		  <header class="headerDiv">
+		    <div class="headerText">TWUBRIC</div>
+		  </header>
+		  <!--Filters/SortBy div starts here-->
+		  <div class="filterDiv" ng-controller="filtersController">
+		    <div class="sortByDiv">
+			  <div class="sortByTextDiv">
+			    Sort By
+			  </div>
+			  <div class="filter" ng-repeat="filt in filters" ng-click="sortBy(filt.id);" ng-cloak>
+			    {{filt.name}}
+			  </div>
+			</div>
+			<!--Filter by date div starts here-->
+			<div style="margin-top:10%; height:25%;" class="sortByDiv">
+			   <div style="height:9%;" class="sortByTextDiv">
+			    Joined Twitter between
+			   </div>
+			   <div class="dateDiv">
+			      <div class="dateTextDiv">Start Date</div>
+			      <input class="dateInputDiv" type="date" id="dateStart" ng-model="dateModel.sDate" ng-change="selectStartDate();"/>
+			   </div>
+			   <div class="dateDiv">
+			      <div class="dateTextDiv">End Date</div>
+			      <input class="dateInputDiv" type="date" id="dateEnd" ng-model="dateModel.eDate" ng-change="selectEndDate();"/>
+			   </div>
+		    </div>
+		  <!--Filter by date div ends here-->
+		  </div>
+		  <!--Filters/SortBy div ends here-->
+		  
+		  <!--Search box & Grid's view starts here-->
+		  <div class="gridDiv" ng-controller="twubricController">
+		    <input class="searchBox" type="search" placeholder="Global Search..." ng-model="searchText"/>
+			<div class="gridsContainer">
+			  <div class="dataContainer" ng-repeat="data in twubricData | filter: searchText" ng-if="data.displayFlag">
+			    <div class="firstDiv">
+				   <div class="profilePhotoDiv">
+				    <img style="width:100%; height:100%; border-radius:50%;" src="{{data.image}}">
+				   </div>
+				   <div class="profileNameDiv" ng-cloak>
+				    {{data.fullname}}
+				   </div>
+				   <div class="twubricScoreDiv" ng-cloak>
+				     {{data.twubric.total}}
+				   </div>
+				   <div title="Click to delete.." class="deleteIconDiv" ng-click="deleteUser(data.uid);">
+				    X
+				   </div>
+				</div>
+                <div class="secondDiv">
+				 <div style="width:30%; height:99%; display:inline; float:left; border-right:1.5px solid #33ACFF;">
+				    <div class="friendsNumDiv" ng-cloak>{{data.twubric.friends}}</div>
+                    <div class="friendsTextDiv">Friends</div>					
+				 </div>
+				 <div style="width:30%; height:99%; display:inline; float:left; border-right:1.5px solid #33ACFF;">
+				    <div class="influenceDiv" ng-cloak>Influence {{data.twubric.influence}}</div>
+				 </div>
+				 <div style="width:39.5%; height:99%; display:inline; float:right;">
+				    <div class="chirpinessDiv" ng-cloak>Chirpiness {{data.twubric.chirpiness}}</div>
+					<div class="joinedDateDiv" ng-cloak>{{data.join_date}}</div>
+				 </div>
+				</div>				
+			  </div>
+			</div>
+		  </div>
+		  <!--Search box & Grid's view ends here-->
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>
