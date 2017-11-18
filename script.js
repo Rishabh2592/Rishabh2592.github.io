@@ -1,4 +1,4 @@
-var twubricApp = angular.module('twubricApp', []);
+var twubricApp = angular.module('twubricApp', ['ngAnimate']);
 twubricApp.controller('twubricController', function($scope,$rootScope){
 //Search box model 	
 $scope.searchText = "";
