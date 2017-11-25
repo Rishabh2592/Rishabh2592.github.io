@@ -5,6 +5,7 @@
 
 .mainWrapper{
 	max-width:1333px;
+	min-width:700px;
 	width:100%;
 	margin:0 auto;
 	border-bottom:6px solid #bf0000;
@@ -425,3 +426,100 @@ input[type=date]::-webkit-inner-spin-button {
     max-height:40px;
 }
 /*body divs ends here*/
+
+/*Responsive design using media queries*/
+@media screen and (max-width: 1130px) and (min-width: 870px) {
+.dataContainer{
+    width: 35%;
+    height: 25%;
+    display: inline;
+    float: left;
+    margin-left: 10%;
+    background: white;
+    margin-top: 1.5%;
+	margin-bottom:1%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1.5px 1.5px lightgray;
+	cursor:pointer;
+}    
+.logoutDiv{
+    width: 40%;
+    height: 40%;
+    color: gray;
+    cursor: pointer;
+    font-size: 0.6em;
+    font-weight: bold;
+    margin-top: 7%;
+    text-align: center;
+    margin-left: 2.5%;
+}
+
+.userDiv{
+    width: 90%;
+    height: 40%;
+    color: palevioletred;
+    font-size: 0.6em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+}
+.headerText{
+    color: gray;
+    font-size: 0.85em;
+    font-weight: 800;
+	display:inline;
+	float:left;
+    height: 65%;
+    width: 20%;
+    text-align: center;
+    padding-top: 0.7%;
+}
+}
+
+@media screen and (max-width: 869px) {
+.dataContainer{
+    width: 60%;
+    height: 25%;
+    display: inline;
+    float: left;
+    margin-left: 20%;
+    background: white;
+    margin-top: 1.5%;
+	margin-bottom:1%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1.5px 1.5px lightgray;
+	cursor:pointer;
+}    
+.logoutDiv{
+    width: 40%;
+    height: 40%;
+    color: gray;
+    cursor: pointer;
+    font-size: 0.5em;
+    font-weight: bold;
+    margin-top: 7%;
+    text-align: center;
+    margin-left: 2.5%;
+}
+
+.userDiv{
+    width: 90%;
+    height: 40%;
+    color: palevioletred;
+    font-size: 0.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+}
+.headerText{
+    color: gray;
+    font-size: 0.7em;
+    font-weight: 800;
+	display:inline;
+	float:left;
+    height: 65%;
+    width: 20%;
+    text-align: center;
+    padding-top: 0.7%;
+}
+}
