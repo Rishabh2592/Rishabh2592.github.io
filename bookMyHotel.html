@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="bookMyHotelApp">
+  <head>
+    <title>BookMyHotel</title>
+     <script src="angularMin.js"></script>
+	 <script src="angularAnimate.js"></script>
+	 <script type="text/javascript" src="bookMyHotelScript.js"></script>
+	 <link href="bookMyHotelStyle.css" rel="stylesheet" type="text/css"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body ng-controller="bookMyHotelController">
+    <div class="fullwidthContiner">
+	  <div class="mainWrapper">
+    	<div class="mainContainer">
+		  <header class="headerDiv">
+		    <div class="headerText">BookMyHotel</div>
+			<input class="searchBox" type="search" placeholder="Search hotel name, location" ng-model="searchText"/>
+			<div class="userAndLogout">
+			   <div class="logoutDiv" ng-click="logoutFunc();">Logout</div>
+			   <div class="userDiv" ng-cloak>Welcome, {{userName}}</div>
+	        </div>	  
+		  </header>
+		  <!--Grid's view starts here-->
+		  <div class="gridDiv">
+			<div class="gridsContainer">
+			  <div class="dataContainer animate-repeat" ng-repeat="data in hotelsJson | filter: searchText" ng-click="openBookingPopup(true,data.uid);">
+                <div class="imageDiv"><img class="imageInside" src="{{data.image}}"></div>
+                <div class="detailsDiv">
+				<div class="innerDetailsDiv">
+				 <div class="hotelName" ng-cloak>{{data.name}}</div>
+				 <div class="hotelPrice" ng-cloak>Rs. {{data.price}} / night</div>
+				</div>
+				<div class="innerDetailsDiv">
+				 <div class="hotelLocation" ng-cloak>{{data.location}}</div>
+				 <div class="hotelBooked" ng-if="data.isBooked">Booked</div>
+				 <div class="hotelRating" ng-cloak>Rating {{data.rating}}</div>
+				</div>
+				</div>	
+			  </div>
+			</div>
+		  </div>
+		  <!--Grid's view ends here-->
+		  
+		  <!--Booking popup starts-->           
+                <div ng-if="popupFlag" class="bookingModal">
+	              <div class="bookingModalContent">
+				  <div class="headingAndClose">
+				    <div class="headingDiv">Book now</div>
+					<div class="closeDiv" ng-click="openBookingPopup(false);">X</div>
+			      </div>
+				  <div class="displaySelectedDiv">
+				    {{selectedHotel}}, {{selectedLocation}} : Rs. {{selectedPrice}} / night
+				  </div>
+				  <div class="dateDiv">
+			        <div class="dateTextDiv">Check In</div>
+			        <input class="dateInputDiv" type="date" id="dateStart" ng-model="dateModel.sDate" ng-change="selectCheckInDate();"/>
+			      </div>
+			      <div class="dateDiv">
+			        <div class="dateTextDiv">Check Out</div>
+			        <input class="dateInputDiv" type="date" id="dateEnd" ng-model="dateModel.eDate" ng-change="selectCheckOutDate();"/>
+			      </div>
+				  <div class="peopleCountDiv">
+				    <div class="peopleTextDiv">Number of Rooms</div>
+				    <input class="counterInput" type="number" id="myNumber" value="1" min="1" max="10" ng-model="roomCounter" ng-change="changeCounter();">
+				  </div>
+				  <div class="totalAmountDiv" ng-cloak><b>TOTAL:</b> Rs. {{totalAmount}}</div>
+				  <div class="buttonDiv"><button ng-click="bookNow();">BOOK</button></div>
+				  </div>
+		        </div>
+		   <!--Booking popup ends--> 
+		</div>
+		<footer></footer>
+	  </div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+.headingDiv{
+	font-family:bookman	, serif;
+	font-weight:bold;
+	font-size:30px;
+	color:gray;
+}
+
+.login-page {
+  width: 500px;
+  height:500px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  width:80%;
+  height:70%;
+  margin: 0 auto 10%;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+body {
+  /*background: #76b852; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  */    
+  background:#fddc2c;
+}
+
+.form input{
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 80%;
+  border: 0;
+  margin: 0 0 25px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#usrname{
+	font-family: 'Roboto', sans-serif;
+	margin-top:10px;
+}
+
+#passwd{
+	font-family: 'Roboto', sans-serif;
+}
+
+#submt{
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: blue;
+	width:80%;
+	border:0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+	margin-bottom:5px;
+}
+
+#submt:hover {
+  background: gray;
+}
+
+.text-danger{
+	font-family: 'Roboto', sans-serif;
+	color:red;
+}

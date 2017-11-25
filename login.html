@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+ <head>
+   <title>BookMyHotel</title>
+	 <meta charset="UTF-8"> 
+    <script src="angularMin.js"></script>
+	<script type="text/javascript" src="loginScript.js"></script>
+    <link href="loginStyle.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+  <body ng-controller="loginController">
+    <div class="login-page">
+	  <div class="form">
+	  <div style="height:6%;"></div>
+	  <span class="headingDiv">BookMyHotel</span>
+	  <div style="height:2%;"></div>
+	  <form class="login-form" ng-submit="validateLogin();">
+	  <input type="text" placeholder="username" id="usrname" required="" name="username" ng-model="userName" autocomplete="off"/>
+      <input type="password" placeholder="password" id="passwd" required="" name="password" ng-model="userPassword" autocomplete="off"/>
+	  <button type="submit" id="submt">Login</button>
+          <p ng-cloak> {{errorMsg}} </p>
+	  </form>
+	  </div>
+	</div>
+  </body>
+</html>

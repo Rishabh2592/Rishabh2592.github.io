@@ -1,0 +1,427 @@
+/*Page layout starts here */
+.fullwidthContiner{
+	width:100%;
+}
+
+.mainWrapper{
+	max-width:1333px;
+	width:100%;
+	margin:0 auto;
+	border-bottom:6px solid #bf0000;
+	background:#ffffff;
+	-webkit-box-shadow: 0px -2px 12px 0px rgba(194,194,194,1);
+	-moz-box-shadow: 0px -2px 12px 0px rgba(194,194,194,1);
+	box-shadow: 0px -2px 12px 0px rgba(194,194,194,1);
+}
+.mainContainer{
+	width:100%;
+	margin:auto;
+	height:870px;
+}
+
+body {
+	font-family: arial;
+	overflow-y: scroll; 
+	margin:0; 
+	padding:0;
+	}
+/*Page layout ends here */
+
+/*header div starts here */
+.headerDiv{
+    height: 10%;
+    width: 100%;
+    margin: auto;
+    background-color: #fddc2c;
+    border-bottom: 1px solid darkgray;
+}
+.headerText{
+    color: gray;
+    font-size: 1em;
+    font-weight: 800;
+	display:inline;
+	float:left;
+    height: 65%;
+    width: 20%;
+    text-align: center;
+    padding-top: 0.7%;
+}
+footer{
+	width:100%;
+	height:98px;
+	margin:auto;
+	background-color:lightgray;
+	border-top:1px solid darkgray;
+}
+.userAndLogout{
+	width:12%;
+	height:95%;
+	display:inline;
+	float:right;
+}
+.logoutDiv{
+    width: 40%;
+    height: 40%;
+    color: gray;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 7%;
+    text-align: center;
+    margin-left: 2.5%;
+}
+.logoutDiv:hover{
+   color:black;
+}
+
+.userDiv{
+    width: 90%;
+    height: 40%;
+    color: palevioletred;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+}
+/*header div ends here */
+
+/*body divs starts here*/
+.filterDiv{
+    width: 20%;
+    height: 95.827%;
+    display: inline;
+    float: left;
+    background: white;
+}
+.gridDiv{
+    width: 100%;
+    height: 95.827%;
+}
+.searchBox{
+    width: 65%;
+    height: 40%;
+    display: inline;
+    float: left;
+    margin-left: 1%;
+    margin-top: 2%;
+    padding-left: 0.5%;
+}
+.sortByDiv{
+	width: 85%;
+    height: 30%;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 10px;
+	box-shadow: 0px 0px 1.5px 1.5px lightgray;
+}
+.sortByTextDiv{    
+	width: 90%;
+    height: 7.5%;
+    margin: auto;
+    border-bottom: 1.5px solid #33ACFF;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    margin-top: 2%;
+    padding-top: 2%;
+}
+.filter{
+	height: 9%;
+    width: 85%;
+    background-color: #33ACFF;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    font-size: 0.75em;
+    color: white;
+    padding-top: 3%;
+    padding-left: 5%;
+	cursor:pointer;
+	border: 1.5px solid gray;
+}
+.filter:hover{
+	box-shadow: 0px 0px 2px 2px gray;
+}
+.dateDiv{
+	width: 90%;
+    height: 35%;
+    margin: auto;
+    margin-top: 5%;
+}
+.dateTextDiv{
+	width: 90%;
+    height: 30%;
+    font-size: 0.75em;
+}
+.dateInputDiv{
+	width: 97%;
+    height: 30%;
+    border: 2px solid #33ACFF;
+}
+.gridsContainer{
+    width: 98%;
+    height: 88%;
+    margin: auto;
+    overflow-y: scroll;
+    margin-top: 2%;
+}
+.dataContainer{
+    width: 30%;
+    height: 25%;
+    display: inline;
+    float: left;
+    margin-left: 2.5%;
+    background: white;
+    margin-top: 1.5%;
+	margin-bottom:1%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1.5px 1.5px lightgray;
+	cursor:pointer;
+}
+
+.dataContainer:hover{
+	box-shadow: 0px 0px 1.5px 1.5px gray;
+}
+
+.imageDiv{
+	width:100%;
+	height:70%;
+	margin:auto;
+}
+.detailsDiv{
+	width:100%;
+	height:30%;
+	margin:auto;	
+}
+.imageInside{
+	width:100%;
+	height:100%;
+	border-radius: 7px 7px 0 0;
+}
+
+.innerDetailsDiv{
+	width:100%;
+	height:50%;
+}
+.hotelName{
+    width: 60%;
+    height: 80%;
+    display: inline;
+    float: left;
+    font-size: 0.75em;
+    color: gray;
+	font-weight:800;
+    padding-left: 5%;
+    margin-top: 1.8%;
+}
+.hotelPrice{
+    width: 30%;
+    height: 80%;
+    display: inline;
+    float: right;
+    font-size: 0.75em;
+    color: gray;
+    margin-top: 1.8%;
+}
+.hotelLocation{
+    width: 37%;
+    height: 80%;
+    display: inline;
+    float: left;
+    font-size: 0.75em;
+    color: gray;
+    padding-left: 5%;
+    margin-top: 1%;
+}
+.hotelBooked {
+	width: 20%;
+    height: 80%;
+    display: inline;
+    float: left;
+    font-size: 0.75em;
+    color: brown;
+	font-weight:800;
+    margin-top: 1%;
+}
+.hotelRating{
+    width: 25%;
+    height: 80%;
+    display: inline;
+    float: right;
+    font-size: 0.75em;
+    color: gray;
+    margin-top: 1%;
+}
+
+.bookingModal{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 105px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.bookingModalContent{
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 1px 1px black;
+    width: 26%;
+    height: 63%;
+    color: #2f5597;
+}
+.dateDiv{
+    width: 94%;
+    height: 15%;
+    margin: auto;
+    margin-top: 3%;
+}
+.dateTextDiv{
+    width: 90%;
+    height: 35%;
+    font-size: 0.75em;
+    margin-left: 2%;
+    color: black;
+}
+.dateInputDiv{
+    width: 94%;
+    height: 40%;
+    margin-left: 2.5%;
+    border: 1.5px solid gray;
+}
+.peopleCountDiv{
+    width: 94%;
+    height: 10%;
+    margin: auto;
+    margin-top: 3%;	
+}
+.peopleTextDiv{
+    width: 50%;
+    height: 65%;
+    font-size: 0.75em;
+    display: inline;
+    float: left;
+    color: black;
+    margin-left: 2.5%;
+    margin-top: 1.5%;
+}
+.counterInput{
+    width: 12%;
+    height: 55%;
+    display: inline;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 1.5px solid gray;	
+}
+.totalAmountDiv{
+    width: 89%;
+    height: 8%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 0.78em;
+    color: black;
+}
+.buttonDiv{
+	width: 89%;
+    height: 10%;
+    margin: auto;
+    margin-top: 5%;
+}
+button{
+    width: 40%;
+    height: 75%;
+    margin-left: 28%;
+    margin-top: 2%;
+    background: gray;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    cursor: pointer;
+	box-shadow: 0px 0px 1px 1px black;
+	border:none;
+}
+button:hover{
+	box-shadow: 0px 0px 1.5px 1.5px black;
+}
+.displaySelectedDiv{
+    width: 90%;
+    height: 7%;
+    padding-top: 4%;
+    margin: auto;
+    background-color: #fddc2c;
+    border: 0.2px solid lightgray;
+    color: gray;
+    font-weight: bold;
+    font-size: 0.75em;
+    text-align: center;
+}
+.headingAndClose{
+	width:100%;
+	height:10%;
+	margin:auto;
+}
+.headingDiv{
+	width:60%;
+	height:70%;
+	display:inline;
+	float:left;
+	color:black;
+	font-size:0.9em;
+	font-weight:bold;
+}
+.closeDiv{
+    width: 5%;
+    height: 55%;
+    display: inline;
+    float: right;
+    color: darkgray;
+    font-size: 0.75em;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+.closeDiv:hover{
+	color: black;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+/*animation css*/
+.animate-repeat {    
+    -webkit-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    -webkit-transition:all linear 0.1s;
+    transition:all linear 0.1s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    opacity:0;
+    max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+    max-height:40px;
+}
+/*body divs ends here*/
