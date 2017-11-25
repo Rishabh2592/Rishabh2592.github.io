@@ -185,12 +185,12 @@ $scope.selectCheckInDate = function(){
        var secondDate = new Date($scope.dateModel.eDate);
        diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
 	   $scope.totalAmount = document.getElementById("myNumber").value * $scope.selectedPrice * diffDays;
-	} else if($scope.dateModel.eDate === "" || $scope.dateModel.eDate === null || $scope.dateModel.sDate === "" || $scope.dateModel.sDate === null){
-		$scope.totalAmount = 0;
 	} else if($scope.dateModel.sDate <= new Date() || $scope.dateModel.sDate >= $scope.dateModel.eDate){
 		alert("Select Check In date greater than current date and lesser than Check Out date");
 		$scope.totalAmount = 0;
 		$scope.dateModel.sDate = "";
+	} else if($scope.dateModel.eDate === "" || $scope.dateModel.eDate === null || $scope.dateModel.sDate === "" || $scope.dateModel.sDate === null){
+		$scope.totalAmount = 0;
 	} else {
 		$scope.totalAmount = 0;
 	}
@@ -202,12 +202,12 @@ $scope.selectCheckOutDate = function(){
        var secondDate = new Date($scope.dateModel.eDate);
        diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
 	   $scope.totalAmount = document.getElementById("myNumber").value * $scope.selectedPrice * diffDays;
-	} else if($scope.dateModel.sDate === "" || $scope.dateModel.sDate === null || $scope.dateModel.eDate === "" || $scope.dateModel.eDate === null){
-		$scope.totalAmount = 0;
 	} else if($scope.dateModel.eDate <= new Date() || $scope.dateModel.sDate >= $scope.dateModel.eDate){
 		alert("Select Check Out date greater than current date and Check In date");
 		$scope.totalAmount = 0;
 		$scope.dateModel.eDate = "";
+	} else if($scope.dateModel.sDate === "" || $scope.dateModel.sDate === null || $scope.dateModel.eDate === "" || $scope.dateModel.eDate === null){
+		$scope.totalAmount = 0;
 	} else {
 		$scope.totalAmount = 0;
 	}
