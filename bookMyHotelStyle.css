@@ -399,6 +399,16 @@ input[type=date]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     display: none;
 }
+
+.footerContent {
+    font-size: 0.8em;
+    width: 35%;
+    height: 30%;
+    margin-top: 2%;
+    margin-left: 3.5%;
+    color: black;
+}
+
 /*animation css*/
 .animate-repeat {    
     -webkit-transition: 0.1s linear all;
@@ -428,7 +438,7 @@ input[type=date]::-webkit-inner-spin-button {
 /*body divs ends here*/
 
 /*Responsive design using media queries*/
-@media screen and (max-width: 1130px) and (min-width: 870px) {
+@media screen and (max-width: 1130px) and (min-width: 870px) {	
 .dataContainer{
     width: 35%;
     height: 25%;
@@ -473,6 +483,15 @@ input[type=date]::-webkit-inner-spin-button {
     width: 20%;
     text-align: center;
     padding-top: 0.7%;
+}
+.bookingModalContent {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 1px 1px black;
+    width: 30%;
+    height: 63%;
+    color: #2f5597;
 }
 }
 
@@ -521,5 +540,14 @@ input[type=date]::-webkit-inner-spin-button {
     width: 20%;
     text-align: center;
     padding-top: 0.7%;
+}
+.bookingModalContent {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 0px 0px 1px 1px black;
+    width: 35%;
+    height: 63%;
+    color: #2f5597;
 }
 }
